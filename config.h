@@ -75,6 +75,8 @@ static const char *autorandrcmd[]  = { "autorandr", "--change", NULL };
 static const char *volumedowncmd[] = {"volume.sh", "down", NULL};
 static const char *volumeupcmd[] = {"volume.sh", "up", NULL};
 static const char *volumemutecmd[] = {"volume.sh", "mute", NULL};
+static const char scratchpadname[] = "scratchpad";
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -96,6 +98,7 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioRaiseVolume,  spawn,          {.v = volumeupcmd } },
 	{ 0,                            XF86XK_AudioMute,  spawn,          {.v = volumemutecmd } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
+	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
