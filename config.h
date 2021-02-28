@@ -7,7 +7,7 @@ static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=12" };
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=14" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char normbordercolor[]   = "#4F4F4F";
 static const char normbgcolor[]       = "#3F3F3F";
@@ -64,7 +64,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *roficmd[] = { "rofi", "-show", "combi", "-theme", "zenburn", "-show-icons", NULL };
 static const char *networkingroficmd[] = { "networkmanager_dmenu", "-theme", "zenburn", NULL };
 static const char *browsercmd[]  = { "firefox", NULL };
-static const char *emacscmd[]  = { "emacsclient", "-c", NULL };
+static const char *emacscmd[]  = { "emacsclient", "-c", "-a", "", NULL };
 static const char *emacscapturecmd[]  = { "/home/bhutch/scripts/emacscapture.sh", NULL };
 static const char *backlightupcmd[]  = { "backlight.sh", "up", NULL };
 static const char *backlightdowncmd[]  = { "backlight.sh", "down", NULL };
