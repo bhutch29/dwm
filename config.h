@@ -8,7 +8,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=14" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=10";
 static const char normbordercolor[]   = "#4F4F4F";
 static const char normbgcolor[]       = "#3F3F3F";
 static const char normfgcolor[]       = "#DCDCCC";
@@ -41,9 +41,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
   /* symbol     arrange function */
-    { "  ﬿",      tile },    /* first entry is default */
-    { "  ",      NULL },    /* no layout function means floating behavior */
-    { "  ",      monocle },
+    { " 󰾍 ",      tile },    /* first entry is default */
+    { "  ",      NULL },    /* no layout function means floating behavior */
+    { "  ",      monocle },
     { "|M|",      centeredmaster },
 };
 
