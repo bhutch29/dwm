@@ -61,7 +61,6 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "st", NULL };
 static const char *roficmd[] = { "rofi", "-show", "combi", "-theme", "zenburn", "-show-icons", NULL };
 static const char *networkingroficmd[] = { "networkmanager_dmenu", "-theme", "zenburn", NULL };
 static const char *backlightupcmd[]  = { "/home/bhutch/scripts/backlight.sh", "up", NULL };
@@ -73,8 +72,9 @@ static const char *autorandrcmd[]  = { "autorandr", "--change", NULL };
 static const char *volumedowncmd[] = {"volume.sh", "down", NULL};
 static const char *volumeupcmd[] = {"volume.sh", "up", NULL};
 static const char *volumemutecmd[] = {"volume.sh", "mute", NULL};
+static const char *termcmd[]  = { "wezterm", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *scratchpadcmd[] = { "wezterm", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
