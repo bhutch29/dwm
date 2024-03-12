@@ -8,7 +8,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=14" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=10";
 static const char normbordercolor[]   = "#4F4F4F";
 static const char normbgcolor[]       = "#3F3F3F";
 static const char normfgcolor[]       = "#DCDCCC";
@@ -41,9 +41,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
   /* symbol     arrange function */
-    { "  ﬿",      tile },    /* first entry is default */
-    { "  ",      NULL },    /* no layout function means floating behavior */
-    { "  ",      monocle },
+    { " 󰾍 ",      tile },    /* first entry is default */
+    { "  ",      NULL },    /* no layout function means floating behavior */
+    { "  ",      monocle },
     { "|M|",      centeredmaster },
 };
 
@@ -63,16 +63,16 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *roficmd[] = { "rofi", "-show", "combi", "-theme", "zenburn", "-show-icons", NULL };
 static const char *networkingroficmd[] = { "networkmanager_dmenu", "-theme", "zenburn", NULL };
-static const char *backlightupcmd[]  = { "/home/bhutch/scripts/backlight.sh", "up", NULL };
-static const char *backlightdowncmd[]  = { "/home/bhutch/scripts/backlight.sh", "down", NULL };
+static const char *backlightupcmd[]  = { "/home/bhutch/scripts/backlight.ts", "up", NULL };
+static const char *backlightdowncmd[]  = { "/home/bhutch/scripts/backlight.ts", "down", NULL };
 static const char *lockcmd[]  = { "/home/bhutch/scripts/i3lockformatted.sh", NULL };
 static const char *suspendcmd[]  = { "systemctl", "suspend", NULL };
 static const char *screenshotcmd[]  = { "flameshot", "gui", NULL };
 static const char *autorandrcmd[]  = { "autorandr", "--change", NULL };
-static const char *volumedowncmd[] = {"volume.sh", "down", NULL};
-static const char *volumeupcmd[] = {"volume.sh", "up", NULL};
-static const char *volumemutecmd[] = {"volume.sh", "mute", NULL};
 static const char *termcmd[]  = { "wezterm", NULL };
+static const char *volumedowncmd[] = {"/home/bhutch/scripts/volume.ts", "down", NULL};
+static const char *volumeupcmd[] = {"/home/bhutch/scripts/volume.ts", "up", NULL};
+static const char *volumemutecmd[] = {"/home/bhutch/scripts/volume.ts", "mute", NULL};
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "wezterm", NULL };
 
