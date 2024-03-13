@@ -41,10 +41,10 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
   /* symbol     arrange function */
-    { " 󰾍 ",      tile },    /* first entry is default */
-    { "  ",      NULL },    /* no layout function means floating behavior */
-    { "  ",      monocle },
-    { "|M|",      centeredmaster },
+    { " T ",      tile },    /* first entry is default */
+    { " F ",      NULL },    /* no layout function means floating behavior */
+    { " M ",      monocle },
+    { "|C|",      centeredmaster },
 };
 
 /* key definitions */
@@ -75,11 +75,13 @@ static const char *volumeupcmd[] = {"/home/bhutch/scripts/volume.ts", "up", NULL
 static const char *volumemutecmd[] = {"/home/bhutch/scripts/volume.ts", "mute", NULL};
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "wezterm", NULL };
+static const char *clearnotificationscmd[] = { "dunstctl", "close-all", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_n,      spawn,          {.v = networkingroficmd } },
+	{ MODKEY|ShiftMask,             XK_n,      spawn,          {.v = clearnotificationscmd } },
 	{ MODKEY,                       XK_apostrophe, spawn,      {.v = termcmd } },
 	{ MODKEY,                       XK_equal,  spawn,          {.v = backlightupcmd } },
 	{ MODKEY,                       XK_minus,  spawn,          {.v = backlightdowncmd } },
