@@ -76,12 +76,14 @@ static const char *volumemutecmd[] = {"/home/bhutch/scripts/volume.ts", "mute", 
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "wezterm", NULL };
 static const char *clearnotificationscmd[] = { "dunstctl", "close-all", NULL };
+static const char *togglenotificationscmd[] = { "dunstctl", "set-paused", "toggle", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_n,      spawn,          {.v = networkingroficmd } },
 	{ MODKEY|ShiftMask,             XK_n,      spawn,          {.v = clearnotificationscmd } },
+	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = togglenotificationscmd } },
 	{ MODKEY,                       XK_apostrophe, spawn,      {.v = termcmd } },
 	{ MODKEY,                       XK_equal,  spawn,          {.v = backlightupcmd } },
 	{ MODKEY,                       XK_minus,  spawn,          {.v = backlightdowncmd } },
