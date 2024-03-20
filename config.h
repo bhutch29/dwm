@@ -7,8 +7,8 @@ static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=14" };
-static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=10";
+static const char *fonts[]          = { "JetBrainsMono Nerd Font Mono:size=14" };
+static const char dmenufont[]       = "JetBrainsMono Nerd Font Mono:size=10";
 static const char normbordercolor[]   = "#4F4F4F";
 static const char normbgcolor[]       = "#3F3F3F";
 static const char normfgcolor[]       = "#DCDCCC";
@@ -69,12 +69,12 @@ static const char *lockcmd[]  = { "/home/bhutch/scripts/i3lockformatted.sh", NUL
 static const char *suspendcmd[]  = { "systemctl", "suspend", NULL };
 static const char *screenshotcmd[]  = { "flameshot", "gui", NULL };
 static const char *autorandrcmd[]  = { "autorandr", "--change", NULL };
-static const char *termcmd[]  = { "wezterm", "--always-new-process", NULL };
+static const char *termcmd[]  = { "wezterm", "start", "--always-new-process", NULL };
 static const char *volumedowncmd[] = {"/home/bhutch/scripts/volume.ts", "down", NULL};
 static const char *volumeupcmd[] = {"/home/bhutch/scripts/volume.ts", "up", NULL};
 static const char *volumemutecmd[] = {"/home/bhutch/scripts/volume.ts", "mute", NULL};
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "wezterm", "--always-new-process", NULL };
+static const char *scratchpadcmd[] = { "wezterm", "start", "--always-new-process", NULL };
 static const char *clearnotificationscmd[] = { "dunstctl", "close-all", NULL };
 static const char *togglenotificationscmd[] = { "dunstctl", "set-paused", "toggle", NULL };
 
@@ -104,17 +104,17 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_Return, zoom,           {0} },
+	// { MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_x,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[3]} },
-	{ MODKEY,                       XK_space,  setlayout,      {0} },
+	// { MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
-	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+	// { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
