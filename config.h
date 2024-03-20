@@ -69,12 +69,12 @@ static const char *lockcmd[]  = { "/home/bhutch/scripts/i3lockformatted.sh", NUL
 static const char *suspendcmd[]  = { "systemctl", "suspend", NULL };
 static const char *screenshotcmd[]  = { "flameshot", "gui", NULL };
 static const char *autorandrcmd[]  = { "autorandr", "--change", NULL };
-static const char *termcmd[]  = { "wezterm", NULL };
+static const char *termcmd[]  = { "wezterm", "--always-new-process", NULL };
 static const char *volumedowncmd[] = {"/home/bhutch/scripts/volume.ts", "down", NULL};
 static const char *volumeupcmd[] = {"/home/bhutch/scripts/volume.ts", "up", NULL};
 static const char *volumemutecmd[] = {"/home/bhutch/scripts/volume.ts", "mute", NULL};
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "wezterm", NULL };
+static const char *scratchpadcmd[] = { "wezterm", "--always-new-process", NULL };
 static const char *clearnotificationscmd[] = { "dunstctl", "close-all", NULL };
 static const char *togglenotificationscmd[] = { "dunstctl", "set-paused", "toggle", NULL };
 
