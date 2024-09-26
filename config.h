@@ -69,7 +69,7 @@ static const char *lockcmd[]  = { "/home/bhutch/scripts/i3lockformatted.sh", NUL
 static const char *suspendcmd[]  = { "systemctl", "suspend", NULL };
 static const char *screenshotcmd[]  = { "flameshot", "gui", NULL };
 static const char *autorandrcmd[]  = { "autorandr", "--change", NULL };
-static const char *termcmd[]  = { "wezterm", "start", "--always-new-process", NULL };
+static const char *termcmd[]  = { "wezterm", "start", NULL };
 static const char *volumedowncmd[] = {"/home/bhutch/scripts/volume.ts", "down", NULL};
 static const char *volumeupcmd[] = {"/home/bhutch/scripts/volume.ts", "up", NULL};
 static const char *volumemutecmd[] = {"/home/bhutch/scripts/volume.ts", "mute", NULL};
@@ -104,7 +104,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	// { MODKEY,                       XK_Return, zoom,           {0} },
+	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_x,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
