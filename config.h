@@ -77,6 +77,7 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "wezterm", "start", "--always-new-process", NULL };
 static const char *clearnotificationscmd[] = { "dunstctl", "close-all", NULL };
 static const char *togglenotificationscmd[] = { "dunstctl", "set-paused", "toggle", NULL };
+static const char *clipcatcmd[] = { "clipcat-menu", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -93,6 +94,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_z,      spawn,          {.v = suspendcmd } },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = autorandrcmd } },
 	{ 0,                            XK_Print,  spawn,          {.v = screenshotcmd } },
+	{ MODKEY,                       XK_c,      spawn,          {.v = clipcatcmd } },
 	{ 0,                            XF86XK_AudioLowerVolume,  spawn, {.v = volumedowncmd } },
 	{ 0,                            XF86XK_AudioRaiseVolume,  spawn, {.v = volumeupcmd } },
 	{ 0,                            XF86XK_AudioMute,  spawn,  {.v = volumemutecmd } },
